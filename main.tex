@@ -71,11 +71,11 @@
 \begin{abstract}
 Underutilized sheep and goat breeds have the ability to adapt to challenging environments due to their genetic composition. Integrating publicly available genomic datasets with new data will facilitate genetic diversity analyses, however this process is complicated by the fact that data could refer to outdated assembly versions or encoded in different formats. Here we present the SMARTER-database, a collection of tools and scripts to standardize genomic data and metadata on global small ruminant populations with a focus on reproducibility. It harmonizes genotypes for about 12,000 sheep and 6,000 goats to a uniform coding and assembly version. Users can access this data via FTP and interact with it through a REST API, a web interface, or a custom R-package, enabling efficient filtering and selection of samples. These tools will empower researchers to focus on the crucial aspect of adaptation, leveraging the rich dataset provided by the SMARTER-database.
 \section{Availability \& Implementation}
-The code is available as open source software under the MIT license at https://github.com/cnr-ibba/SMARTER-database. The database is accessible at https://webserver.ibba.cnr.it/smarter/
+The code is available as open source software under the MIT license at https://github.com/cnr-ibba/SMARTER-database.
 \end{abstract}
 
 \begin{keywords}
-Genetics and Genomics; Bioinformatics; Animal Genetics; Data Integration
+sheep; goat; genotypes; adaptation; REST-API; standardization; reproducibility; database
 \end{keywords}
 \end{frontmatter}
 
@@ -277,11 +277,9 @@ The SMARTER database project provides valuable information on sheep and goat pop
 \item License: MIT
 \end{itemize}
 
-\section{Availability of Test Data (If applicable)}
+\section{Availability of Test Data}
 
-\textit{GigaByte} requires authors to deposit the data set(s) supporting the results reported in submitted manuscripts in a publicly-accessible data repository such as GigaDB (see GigaDB database \href{http://gigadb.org/site/term}{terms of use} for complete details). This section should be included when supporting data are available and must include the name of the repository and the permanent identifier or accession number and persistent hyperlinks for the data sets (if appropriate). The following format is recommended:
-
-``The data set(s) supporting the results of this article is(are) available in the [repository name] repository, [cite unique persistent identifier].''
+The genotype files supporting the results of this article are available through FTP at \url{webserver.ibba.cnr.it}. Metadata and sample information can be accessed via the SMARTER-backend REST API at \url{https://webserver.ibba.cnr.it/smarter-api/} using \url{https://cnr-ibba.github.io/r-smarter-api/} and through the database portal at \url{https://webserver.ibba.cnr.it/smarter/}.
 
 \section{Declarations}
 
@@ -331,7 +329,7 @@ This project has received funding from the European Union’s Horizon 2020 resea
 \item Data curation: Paolo Cozzi, Valentina Tsartsianidou, Konstantinos Gkagkavouzis, Pablo Peraza, {Anna Maria} Johansson, {Juan José} Arranz, Fernando Freire, Szilvia Kusza, Gwenola Tosser-Klopp
 \item Formal analysis: Arianna Manunza, Johanna Ramirez-Diaz, Valentina Tsartsianidou, Filippo Biscarini, Lucy Peters
 \item Writing - original draft preparation: Paolo Cozzi, Alessandra Stella
-\item Writing - review \& editing: Arianna Manunza, Johanna Ramirez-Diaz, Bertrand Servin, Rachel Rupp
+\item Writing - review \& editing: Arianna Manunza, Johanna Ramirez-Diaz, Bertrand Servin, Filippo Biscarini, Rachel Rupp
 \item Visualization: Paolo Cozzi
 \item Supervision: Alessandra Stella, Bertrand Servin
 \item Funding acquisition: Alessandra Stella, Bertrand Servin
