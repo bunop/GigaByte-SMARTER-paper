@@ -6,6 +6,7 @@
         "genotyping",
         "gigascience",
         "mongoengine",
-        "PATO"
+        "PATO",
+        "Probeset"
     ]
 }
