@@ -1,0 +1,9 @@
+name: pandoc
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - pandoc=3.2.1
+  - pandoc-crossref=0.3.17.1
+prefix: /home/paolo/.conda/envs/pandoc
