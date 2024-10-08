@@ -84,7 +84,34 @@ sheep; goat; genotypes; adaptation; REST-API; standardization; reproducibility; 
 \subsection{Background}
 
 The presence of small ruminant populations is crucial to the socio-economic prosperity of human settlements, particularly in European marginal regions. In these areas, sheep and goat breeds that are not fully utilized have the potential to significantly increase the profitability of small ruminant farming. The reason for their value is their distinctive and often unusual genetic composition (e.g. \citep{Stella2018,Kijas2012}), which renders them an exceptionally valuable resource for adapting to challenging environments, withstanding harsh farming conditions, combating biotic and abiotic stressors, and producing high-quality animal-derived products. In this context, the SMARTER project\citep{SmarterProjectEU} developed innovative strategies to improve resilience and efficiency related traits of sheep and goats in diverse environments.
-Here we present the SMARTER-database, a collection of tools and scripts to gather, standardize and provide the scientific community with a comprehensive dataset of genomic data and metadata information on worldwide small ruminant populations. Existing datasets were scouted from public repositories and complemented with newly produced data within the context of the SMARTER project\citep{SmarterProjectEU}. Our system provides a single entry point and standardization tools to explore genetic diversity and demography of goat and sheep breeds, and to understand the genetic basis of resilience and adaptation, especially in under-utilized breeds.
+Here we present the SMARTER-database, a collection of tools and scripts to gather, standardize and provide the scientific community with a comprehensive dataset of genomic data and metadata information on worldwide small ruminant populations. Existing datasets were scouted from public repositories (see Table \ref{tab:public_datasets}) and complemented with newly produced data within the context of the SMARTER project\citep{SmarterProjectEU}. Our system provides a single entry point and standardization tools to explore genetic diversity and demography of goat and sheep breeds, and to understand the genetic basis of resilience and adaptation, especially in under-utilized breeds.
+
+\begin{table*}[b!]
+\caption{Publicly available datasets integrated into the SMARTER database, including chip types, sample sizes, and references. See GigaDB dataset for the full details.}
+\label{tab:public_datasets}
+\begin{center}
+\begin{tabular}{l l l}
+\toprule
+chip\_name & samples & reference \\
+\midrule
+IlluminaOvineHDSNP & 542 & Rochus et al. 2018 \citep{Rochus2018} \\
+IlluminaGoatSNP50 & 4653 & Stella et al. 2018 \citep{Stella2018} \\
+IlluminaOvineSNP50 & 2957 & Kijas et al. 2012 \citep{Kijas2012} \\
+IlluminaOvineHDSNP & 93 & Rochus et al. 2020 \citep{Rochus2020} \\
+IlluminaOvineSNP50 & 1512 & Wang et al. 2021 \citep{Wang2021} \\
+IlluminaOvineHDSNP & 911 & Wang et al. 2021 \citep{Wang2021} \\
+WholeGenomeSequencing & 355	& Wang et al. 2021 \citep{Wang2021} \\
+IlluminaOvineSNP50 & 353 & Beynon et al. 2015 \citep{Beynon2015} \\
+IlluminaOvineSNP50 & 116 & Barbato et al. 2017 \citep{Barbato2017} \\
+IlluminaOvineSNP50 & 838 & Ciani et al. 2020 \citep{Ciani2020} \\
+IlluminaOvineSNP50 & 48 & Belabdi et al. 2019 \citep{Belabdi2019} \\
+IlluminaOvineSNP50 & 46 & Gaouar et al. 2016 \citep{Gaouar2016} \\
+IlluminaGoatSNP50 & 364 & Burren et al. 2016 \citep{Burren2016} \\
+IlluminaGoatSNP50 & 523 & Cortellari et al. 2021 \citep{Cortellari2021} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
 
 \subsection{Data composition}
 
