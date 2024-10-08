@@ -174,7 +174,7 @@ Figure \ref{fig:sheep_technology} illustrates the distribution of 12,000 sheep s
 All data processing steps, including environment setup, database initialization, and data processing, are handled using GNU Make\citep{Stallman2004} in order to provide simple commands to execute all the steps required to produce the final database. These steps, and the importing scripts executed by these steps, are idempotent, meaning that repeating the same command has no side effects, ensuring consistency in the final dataset. This also means that a new dataset can be added simply by updating the Makefile with the new required steps and then calling the proper make command again. The database follows Semantic Versioning\citep{prestonwerner2013semantic} to track updates and changes effectively. This project is publicly accessible on GitHub\citep{SMARTERDB-GH}, where GitHub workflows automate the process of running Continuous Integration (CI) tests which validate critical steps, such as genotype conversion, to ensure that everything functions correctly after each new code contributions.
 
 \begin{table}
-\caption{Amount of samples with GPS coordinates. Foreground samples are produced within the SMARTER project, while background samples are collected from already published datasets}
+\caption{Number of samples with GPS coordinates. Foreground samples are produced within the SMARTER project, while background samples are collected from already published datasets}
 \label{tab:samples}
 \begin{center}
 \begin{tabular}{l l l}
@@ -213,7 +213,7 @@ Background Goats & 5540 & 58,34\% \\
 
 \subsection{Data access}
 
-Data can be accessed through two distinct channels: the fully processed PLINK binary genotype files for both goat and sheep are accessible via FTPS, while sample information and metadata are retrievable through SMARTER-backend\citep{SMARTERAPI}, a RESTful API interface\citep{REST}. Users are required to identify their desired samples using the API interface and then to extract their genotypes from the global file. This also means that the resource can be programmatically accessed, thereby enhancing reproducibility and facilitating data integration with other resources.
+Data can be accessed through two distinct channels: the fully processed PLINK binary genotype files for both goat and sheep are accessible via anonymous FTP, while sample information and metadata are retrievable through SMARTER-backend\citep{SMARTERAPI}, a RESTful API interface\citep{REST}. Users are required to identify their desired samples using the API interface and then to extract their genotypes from the global file. This also means that the resource can be programmatically accessed, thereby enhancing reproducibility and facilitating data integration with other resources.
 
 SMARTER-backend is a Python-Flask application built on top of the SMARTER-database MongoDB, offering a specific URL (i.e endpoint) to interact with each object stored in the SMARTER-database. Users can query for SNPs, samples, datasets, and breeds by making HTTP requests to the appropriate endpoint and providing the necessary parameters to obtain information in JSON format (Fig. \ref{fig:backend_url}).
 Endpoint parameters documentation is detailed using Swagger and can be accessed via the \texttt{/docs} location of the SMARTER-backend itself. Table \ref{tab:endpoints} provides a list of the available endpoints.
@@ -265,7 +265,7 @@ Endpoint suffix & Data type & Description \\
 \end{figure*}
 
 \subsection{Conclusions and future developments}
-The SMARTER database project provides valuable information on sheep and goat populations around the world. It is an essential tool for researchers, enabling them to generate new insights and offer the possibility to store new genotypes and drive progress in this field. Comprising a suite of scripts, it standardizes genotype data sourced from various methods and origins, resulting in a unified dataset primed for analysis across different assembly versions for both sheep and goats. Data access is granted to users through the SMARTER-backend, using R packages or the web interfaces, while genotypes are available over FTPS. The entire project was developed with the goal of facilitating reproducibility and programmatic data accessibility.
+The SMARTER database project provides valuable information on sheep and goat populations around the world. It is an essential tool for researchers, enabling them to generate new insights and offer the possibility to store new genotypes and drive progress in this field. Comprising a suite of scripts, it standardizes genotype data sourced from various methods and origins, resulting in a unified dataset primed for analysis across different assembly versions for both sheep and goats. Data access is granted to users through the SMARTER-backend, using R packages or the web interfaces, while genotypes are available over FTP. The entire project was developed with the goal of facilitating reproducibility and programmatic data accessibility.
 The SMARTER database is open to additional dataset integration: given the schemaless nature of the database and the ability to collect data using the REST API, the most valuable contributions should include metadata, such as GPS coordinates and phenotypes. This type of data will contribute significantly to understanding adaptation and resilience in small ruminants.
 We plan to support additional assemblies with the option to collect data in VCF format. This will help the community reuse this data and provide the opportunity to upload genotypes to public archives like EBI-EVA.
 Moreover, by utilizing Illumina TOP coding, users can easily convert data between different assembly versions and project coordinates from older assemblies onto newer ones. This approach ensures accurate SNP positioning across assemblies without concerns about probe orientation.
@@ -298,7 +298,7 @@ The genotype files supporting the results of this article are available via anon
 \item EBI: European Bioinformatics Institute
 \item EVA: European Variation Archive
 \item FAO: Food and Agriculture Organization
-\item FTPS: File Transfer Protocol Secure
+\item FTP: File Transfer Protocol
 \item GNU: GNU's Not Unix
 \item GPS: Global Positioning System
 \item HTTP: HyperText Transfer Protocol
