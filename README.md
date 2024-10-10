@@ -8,7 +8,7 @@ Install `pandoc` and `pandoc-crossref` in a conda environment, or install using
 conda lock:
 
 ```bash
-conda-lock install --name my-environment --file conda-lock.yml
+conda-lock install --name my-environment conda-lock.yml
 ```
 
 Activate the environment and run the following command:
